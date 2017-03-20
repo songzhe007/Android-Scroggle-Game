@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">NUMAD17S-B-ZheSong</string>
+    <string name="ErrorGenerator_label">Generate Error</string>
+    <string name="dictionary_label">Dictionary</string>
+    <string name="about_label">About Me</string>
+    <string name="degree_label">Degree Program: Computer Science</string>
+    <string name="Email_label">song.zhe2@husky.neu.edu</string>
+    <string name="student_label">1.st year MS student</string>
+    <string name="quit_label">Quit</string>
+    <string name="head_label">Zhe Song</string>
+    <string name="imei_label">Your Device\'s IMEI is:</string>
+    <string name="about">About</string>
+    <string name="dictionary_title">Test Dictionary</string>
+    <string name="clear_label">Clear</string>
+    <string name="return_label">Return to Menu</string>
+    <string name="acknowledgement_button">Acknowledgments</string>
+    <string name="acknowledgement_title">Acknowledgements</string>
+    <string name="ack1">1. Thanks to \'synic\' from stackoverflow for "Return to Menu" inspirations:  </string>
+    <string name="ack2"> http://stackoverflow.com/questions/2776830/android-moving-back-to-first-activity-on-button-click/2776875</string>
+    <string name="ack3">2. Thanks to the instructions in following papers for reading text file in android:  </string>
+    <string name="ack4">(1). http://www.programgo.com/article/13822872014/ </string>
+    <string name="ack5">(2). http://www.programcreek.com/java-api-examples/index.php?api=android.support.annotation.RawRes</string>
+    <string name="ack6">3. Thanks to my friend: Mr. Shiyu Sun for his suggestion of directly implementing HashSet class at testdictionary activity to shorten the response time.</string>
+    <string name="wordgame_label">Word Game</string>
+    <string name="phase1_end">Phase 1 end!</string>
+    <string name="phase2_end">Game Over!</string>
+
+
+
+    <string name="long_app_name">Scroggle game</string>
+    <string name="action_settings">Settings</string>
+    <string name="restart_label">Reselect</string>
+    <string name="submit_label">Select Words</string>
+    <string name="pause_button">Pause</string>
+    <string name="main_menu_label">Main Menu</string>
+    <string name="declare_winner">%1$s is the winner</string>
+    <string name="continue_label">Continue</string>
+    <string name="new_game_label">New Game</string>
+    <string name="phase2_button">Phase 2</string>
+    <string name="about_title">About Ultimate Tic Tac Toe</string>
+    <string name="ok_label">OK</string>
+    <string name="scroggle_label">About Scroggle</string>
+    <string name="about_text">
+        Scroggle is an unusual twist on the famous games of word scrambles, Boggle and Scrabble. \n
+        At the start of the game, a 9x9 grid with 9x9 letters in the grid is displayed. Each smaller
+grid has been populated with 9-letter words using Boggle rules.\n
+
+        You will starts off with 3 minutes In phase 1 of the game, which lasts
+for half of the time (1.5 min), you need to find the longest word you can in each
+Boggle board. \n The points you earned depends on the length and letter frequency of the word you selected.
+
+        After you pick all 9 words from the Boggle board, you will be directed into phase 2 and you need
+        to quickly select a single letter from each grid and play Boggle for the remaining time using those
+letters.
+
+    </string>
+    <string name="scoreboard">Scoreboard</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="username">UserName</string>
+    <string name="phase1_score">Phase1</string>
+    <string name="phase2_score">Phase2</string>
+    <string name="final_score">Final</string>
+    <string name="highest_score">Highest</string>
+    <string name="Word">Word</string>
+    <string name="Date_Time">Time</string>
+</resources>
