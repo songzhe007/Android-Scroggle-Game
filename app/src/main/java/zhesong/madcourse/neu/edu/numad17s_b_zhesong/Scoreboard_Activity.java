@@ -29,6 +29,10 @@ import java.util.Map;
  * Created by SongZheDerrick on 17/3/11.
  */
 
+/**
+ * Created by SongZheDerrick on 17/3/11.
+ */
+
 public class Scoreboard_Activity extends Activity {
     private DatabaseReference mDatabase;
     private String token;

@@ -49,7 +49,8 @@ import zhesong.madcourse.neu.edu.numad17s_b_zhesong.UsersInfo;
  */
 
 public class UploadDialog extends DialogFragment {
-    private static final String SERVER_KEY = "key=AAAAQwpeuG4:APA91bEwDgNl4y44xT51pX_JkAbhEqYt9nXdwI6kH6gVgWelVcN_-CFdhKjVhT3Jx7QKEK1DyL0E9CBOK6wCx26LhNX2YBDvClz7bSeH8WrhuvKNlkUs63qNZBb-vDmOIo6Ja_QnO5ew";
+
+   private static final String SERVER_KEY = "key=AAAAQwpeuG4:APA91bHhUvjqB2E63NIxXZq_TD_HYoqWCy6BCl5V1u1uCcS5t-0HjAiW6LTKKKmVk37E-VW_11binQPBx2xOe3VJVV4ff9gTeMOO8uCuayKuIjnnY8y4qCvSz2xQc-e4pMrN3mWjsxOk";
     private DatabaseReference mDatabase;
     private String token;
     private String word_highestscore;
@@ -269,3 +270,4 @@ public class UploadDialog extends DialogFragment {
         return builder.create();
     }
 }
+

@@ -87,7 +87,7 @@ public class MainFragment extends Fragment {
    }
    public boolean gameActivityExist(){
       Intent intent = new Intent();
-      intent.setClassName("zhesong.madcourse.neu.edu.numad17s_zhesong", "GameActivity");
+      intent.setClassName("zhesong.madcourse.neu.edu.numad17s_b_zhesong", "GameActivity");
       return getActivity().getPackageManager().resolveActivity(intent, 0) == null;
    }
    @Override

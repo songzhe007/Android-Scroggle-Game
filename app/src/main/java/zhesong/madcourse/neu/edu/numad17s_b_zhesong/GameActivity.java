@@ -125,7 +125,7 @@ public class GameActivity extends Activity {
         //get the letters
         //Intent intent = getIntent();
         //ninewords_strings = intent.getStringArrayListExtra("ListString");
-          startGame();
+        startGame();
     }
 
     public void startGame(){
@@ -169,3 +169,4 @@ public class GameActivity extends Activity {
     }
 
 }
+
