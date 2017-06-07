@@ -2,12 +2,10 @@ package zhe.scrogglegame;
 
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -18,17 +16,10 @@ import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 
-//import zhesong.madcourse.neu.edu.numad17s_b_zhesong.UsersInfo;
-import org.w3c.dom.Text;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-/**
- * Created by SongZheDerrick on 17/3/11.
- */
 
 /**
  * Created by SongZheDerrick on 17/3/11.
@@ -54,7 +45,8 @@ public class Scoreboard_Activity extends Activity {
         mDatabase.child("user").child(token).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                GenericTypeIndicator<HashMap<String, List<UsersInfo>>> t = new GenericTypeIndicator<HashMap<String, List<UsersInfo>>>() {};
+                GenericTypeIndicator<HashMap<String, List<UsersInfo>>> t
+                        = new GenericTypeIndicator<HashMap<String, List<UsersInfo>>>() {};
                 Map<String, List<UsersInfo>> myMap = dataSnapshot.getValue(t);
                 if(myMap == null){
                     myMap = new HashMap<>();

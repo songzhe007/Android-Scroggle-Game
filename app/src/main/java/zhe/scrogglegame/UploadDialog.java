@@ -1,11 +1,14 @@
 package zhe.scrogglegame;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -153,7 +156,8 @@ public class UploadDialog extends DialogFragment {
         mDatabase.child("user").child(token).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                GenericTypeIndicator<HashMap<String, List<UsersInfo>>> t = new GenericTypeIndicator<HashMap<String, List<UsersInfo>>>() {};
+                GenericTypeIndicator<HashMap<String, List<UsersInfo>>>
+                        t = new GenericTypeIndicator<HashMap<String, List<UsersInfo>>>() {};
                 content_map = (Map<String, List<UsersInfo>>)dataSnapshot.getValue(t);
                 if(content_map == null){
                     current_names = new HashSet<>();
@@ -161,7 +165,9 @@ public class UploadDialog extends DialogFragment {
                 }
                 else
                     current_names = content_map.keySet();
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, current_names.toArray(new String[current_names.size()]));
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                        android.R.layout.simple_spinner_item,
+                        current_names.toArray(new String[current_names.size()]));
                 splist.setAdapter(adapter);
             }
 
@@ -242,6 +248,7 @@ public class UploadDialog extends DialogFragment {
                 if(username.getText().length() > 0)
                     UploadDialog.this.dismiss();
             }
+
         });
         button_cancel.setOnClickListener(new View.OnClickListener() {
             @Override

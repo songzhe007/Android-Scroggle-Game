@@ -23,6 +23,7 @@ public class MainFragment extends Fragment {
                             Bundle savedInstanceState) {
       View rootView =
             inflater.inflate(R.layout.fragment_main, container, false);
+
       rootView.findViewById(R.id.scoreboard_button).setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
@@ -39,8 +40,9 @@ public class MainFragment extends Fragment {
       });
       // Handle buttons here...
       View newButton = rootView.findViewById(R.id.new_button);
-      //View continueButton = rootView.findViewById(R.id.continue_button);
       View aboutButton = rootView.findViewById(R.id.about_button);
+      View multiPlayerButton = rootView.findViewById(R.id.multiPlayer_Button);
+
       newButton.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View view) {
@@ -65,7 +67,15 @@ public class MainFragment extends Fragment {
             mDialog = builder.show();
          }
       });
+      multiPlayerButton.setOnClickListener(new View.OnClickListener(){
+         @Override
+         public void onClick(View view){
+            Intent intent = new Intent(getActivity(),PickUserName.class);
+            getActivity().startActivity(intent);
+         }
+      });
       return rootView;
+
 
    }
 

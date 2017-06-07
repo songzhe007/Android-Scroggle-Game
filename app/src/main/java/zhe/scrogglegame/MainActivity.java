@@ -1,72 +1,72 @@
+/***
+ * Excerpted from "Hello, Android",
+ * published by The Pragmatic Bookshelf.
+ * Copyrights apply to this code. It may not be used to create training material, 
+ * courses, books, articles, and the like. Contact us if you are in doubt.
+ * We make no guarantees that this code is fit for any purpose. 
+ * Visit http://www.pragmaticprogrammer.com/titles/eband4 for more book information.
+***/
 package zhe.scrogglegame;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.ToggleButton;
 import android.support.v7.app.AppCompatActivity;
-
-import com.google.firebase.messaging.FirebaseMessaging;
 
 
 
 public class MainActivity extends AppCompatActivity {
 
+   MediaPlayer mMediaPlayer;
+   private ToggleButton toggle_btn;
+   // ...
 
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.ativity_main2);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        setTitle("Zhe Song");
+      toggle_btn= (ToggleButton) findViewById(R.id.button_toggle);
 
+      toggle_btn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
 
-        Button about_button = (Button) findViewById(R.id.about_button);
-        about_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this, AboutMe_Activity.class);
-                startActivity(intent);
+         @Override
+         public void onCheckedChanged(CompoundButton buttonView,
+                                      boolean isChecked) {
+            // TODO Auto-generated method stub
+            if(isChecked){
+               mMediaPlayer.setVolume(0.5f, 0.5f);
+               mMediaPlayer.setLooping(true);
+               mMediaPlayer.start();
+            }else{
+                 mMediaPlayer.pause();
             }
-        });
-        Button Dictionary_button = (Button) findViewById(R.id.new_button);
-        Dictionary_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this, testdictionary_Activity.class);
-                startActivity(intent);
+         }
 
-            }
+      });
+      }
 
-        });
 
-        Button ErrorGenerator_button = (Button) findViewById(R.id.ErrorGenerator_button);
-        ErrorGenerator_button.setOnClickListener(new View.OnClickListener() {
+   @Override
+   protected void onResume() {
+      super.onResume();
+      if (toggle_btn.isChecked()) {
+         mMediaPlayer = MediaPlayer.create(this, R.raw.a_guy_1_epicbuilduploop);
+         mMediaPlayer.setVolume(0.5f, 0.5f);
+         mMediaPlayer.setLooping(true);
+         mMediaPlayer.start();
+      }
+      else{
+         mMediaPlayer.pause();
+      }
+   }
 
-            public void onClick(View v) {
-                RuntimeException e = new RuntimeException();
-                throw e;
-            }
-        });
-
-        Button wordgame_button = (Button) findViewById(R.id.button);
-        wordgame_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this, MainActivity2.class);
-                startActivity(intent);
-            }
-
-        });
-        subscribeToNews();
-    }
-
-    public void subscribeToNews(){
-        // [START subscribe_topics]
-        FirebaseMessaging.getInstance().subscribeToTopic("wordgame");
-    }
-
+   @Override
+   protected void onPause() {
+      super.onPause();
+      mMediaPlayer.stop();
+      mMediaPlayer.reset();
+      mMediaPlayer.release();
+   }
 }

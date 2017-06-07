@@ -34,6 +34,15 @@
       android:padding="@dimen/menu_button_padding"
       android:text="@string/new_game_label"
       android:textAllCaps="false"/>
+   <Button
+       android:id="@+id/multiPlayer_Button"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:layout_margin="@dimen/menu_button_margin"
+       android:padding="@dimen/menu_button_padding"
+       android:textAllCaps="false"
+       android:text="@string/multiplayer_button"/>
 
    <Button
       android:id="@+id/about_button"

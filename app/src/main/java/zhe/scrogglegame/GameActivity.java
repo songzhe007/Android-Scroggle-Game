@@ -141,7 +141,7 @@ public class GameActivity extends Activity {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             //moveTaskToBack(true);
             Intent intent = new Intent();
-            intent.setClass(GameActivity.this, MainActivity2.class);
+            intent.setClass(GameActivity.this, MainActivity.class);
             startActivity(intent);
             return true;
         }

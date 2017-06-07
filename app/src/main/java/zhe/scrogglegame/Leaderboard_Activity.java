@@ -110,7 +110,8 @@ public class Leaderboard_Activity extends Activity {
                     new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
-                            GenericTypeIndicator<HashMap<String, List<UsersInfo>>> t = new GenericTypeIndicator<HashMap<String, List<UsersInfo>>>() {
+                            GenericTypeIndicator<HashMap<String, List<UsersInfo>>>
+                                    t = new GenericTypeIndicator<HashMap<String, List<UsersInfo>>>() {
                             };
                             Map<String, List<UsersInfo>> myMap = dataSnapshot.getValue(t);
                             String from = "nobody";
@@ -192,7 +193,8 @@ public class Leaderboard_Activity extends Activity {
                 vg.removeAllViews();
                 View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.score_item, null);
                 vg.addView(view);
-                GenericTypeIndicator<HashMap<String, UsersInfo>> t = new GenericTypeIndicator<HashMap<String, UsersInfo>>() {};
+                GenericTypeIndicator<HashMap<String, UsersInfo>> t =
+                        new GenericTypeIndicator<HashMap<String, UsersInfo>>() {};
                 Map<String, UsersInfo> myMap = dataSnapshot.getValue(t);
                 if(myMap == null){
                     return;
