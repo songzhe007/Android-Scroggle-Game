@@ -13,7 +13,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context="zhesong.madcourse.neu.edu.numad17s_b_zhesong.GameFragment"
+    tools:context="zhe.scrogglegame.GameFragment"
     >
 
    <include android:id="@+id/large1" layout="@layout/small_board"

@@ -13,9 +13,9 @@
    android:layout_width="match_parent"
    android:layout_height="match_parent"
    android:clipChildren="false"
-   tools:context="zhesong.madcourse.neu.edu.numad17s_b_zhesong.MainActivity2">
+   tools:context="zhe.scrogglegame.MainActivity2">
 
-   <zhesong.madcourse.neu.edu.numad17s_b_zhesong.ScrollingView
+   <zhe.scrogglegame.ScrollingView
       android:id="@+id/main_background"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
@@ -33,7 +33,7 @@
 
    <fragment
       android:id="@+id/main_fragment"
-      class="zhesong.madcourse.neu.edu.numad17s_b_zhesong.MainFragment"
+      class="zhe.scrogglegame.MainFragment"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center"

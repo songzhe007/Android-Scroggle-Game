@@ -4,7 +4,7 @@
     android:id="@+id/score_item"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="zhesong.madcourse.neu.edu.numad17s_b_zhesong.Scoreboard_Activity"
+    tools:context="zhe.scrogglegame.Scoreboard_Activity"
     android:paddingBottom="5dp">
     <TextView
         android:layout_width="0dp"

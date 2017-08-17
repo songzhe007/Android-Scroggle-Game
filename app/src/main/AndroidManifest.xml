@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="zhesong.madcourse.neu.edu.numad17s_b_zhesong">
+    package="zhe.scrogglegame">
 
     <application
         android:allowBackup="true"
@@ -15,12 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Aboutme_Activity"
+        <activity android:name=".AboutMe_Activity"
             android:label="@string/about">
 
         </activity>
         <activity android:name=".testdictionary_Activity">
-                  android:label="@strings/dictionary_title"
+            android:label="@strings/dictionary_title"
         </activity>
         <activity android:name=".Scoreboard_Activity">
             android:label="Scoreboard"
@@ -39,7 +39,7 @@
             android:launchMode="singleTask">
         </activity>
         <activity
-            android:name="zhesong.madcourse.neu.edu.numad17s_b_zhesong.GameActivity"
+            android:name="zhe.scrogglegame.GameActivity"
             android:launchMode="singleTask">
         </activity>
         <service android:name=".WordGameMessagingService">
@@ -55,4 +55,5 @@
         </service>
     </application>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
 </manifest>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "145713245824",
+    "firebase_url": "https://scrogglegame.firebaseio.com",
+    "project_id": "scrogglegame",
+    "storage_bucket": "scrogglegame.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145713245824:android:407c069b4f11f8e6",
+        "android_client_info": {
+          "package_name": "zhe.scrogglegame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145713245824-fumcm1cnhjl526f8t3ra4rgirh8j57ku.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXbaqaT8OXFz2p5NVk5p0oqfUByhd0S3I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
